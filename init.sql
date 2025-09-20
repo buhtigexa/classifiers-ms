@@ -7,7 +7,9 @@ USE classifiersdb;
 create table if not exists classifiers (
 	id integer not null primary key auto_increment,
 	name varchar(100) not null,
-	created datetime not null
+	description text null,
+	is_active boolean null default true,
+	created_at datetime not null default current_timestamp
 );
 
 
